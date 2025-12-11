@@ -1,0 +1,137 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  /* Core Brand Colors */
+  --warning: #f5ec19;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg-dark);
+  color: var(--white);
+}
+
+html,
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "Oswald";
+  src: url("/fonts/font-heading.woff2") format("woff2");
+  font-weight: 400 700;
+  font-display: swap;
+}
+
+@theme {
+  /* --- COLOR PALETTE --- */
+
+  /* Backgrounds */
+  --bg-dark: #0a1f2a; /* Main Page Background */
+  --bg-surface: #0c2430; /* Navbars, Modals, Backdrops (Was hardcoded #0C2430) */
+
+  /* Containers */
+  --card-blue: #0f4b5a; /* Cards, Testimonies */
+  --panel-blue: #145d77; /* Footers, Panels */
+
+  /* Accents */
+  --accent-yellow: #f6e72a; /* Buttons, Highlights */
+  --primary-blue: #0d9dd1; /* Bright Text Blue (Was hardcoded #0d9dd1) */
+
+  /* Typography */
+  --muted-gray: #d1d8e0; /* Subtitles */
+  --white: #ffffff;
+
+  /* --- FONTS --- */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-heading: "Oswald", ui-sans-serif, system-ui, sans-serif;
+
+  /* --- ANIMATIONS --- */
+  --animate-floating: floating 6s ease-in-out infinite;
+  --animate-floating-v2: floating-v2 8s ease-in-out infinite;
+  --animate-bouncing: bouncing-left-to-right 1.5s ease-in-out infinite;
+}
+
+/* 🔥 AUTOMATIC TYPOGRAPHY 🔥 */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    font-weight: 700;
+  }
+}
+
+/* KEYFRAMES */
+@keyframes floating {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes floating-v2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-25px);
+  }
+}
+
+@keyframes bouncing-left-to-right {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-15px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* 🛠️ SEMANTIC UTILITIES 
+   No hex codes allowed here! Only variables.
+*/
+
+@utility section-container {
+  @apply mx-auto container px-6 lg:px-0 xl:px-24;
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
+/* Navbar / Glass Effects */
+@utility bg-backdrop {
+  /* Using --bg-surface instead of #0C2430 */
+  @apply bg-(--bg-surface)/80 backdrop-blur-md border-b border-white/10;
+}
+
+@utility btn-backdrop {
+  /* Using --bg-surface */
+  @apply rounded-md bg-(--bg-surface)/50 hover:bg-(--bg-surface)/30 active:bg-(--bg-surface)/20 backdrop-blur-md border border-white/20 transition-colors duration-200 py-2;
+}
+
+/* Buttons */
+@utility btn-yellow {
+  /* Using --accent-yellow */
+  @apply bg-(--accent-yellow) text-black text-sm font-bold font-heading uppercase tracking-wide flex-center px-6 py-3 rounded-md hover:brightness-110 transition-all shadow-lg cursor-pointer;
+}
+
+@utility btn-blue {
+  /* Using --panel-blue */
+  @apply bg-(--panel-blue) text-white border border-white/10 flex-center rounded-md px-6 py-3 hover:brightness-110 font-heading uppercase tracking-wide font-bold transition-all cursor-pointer;
+}
