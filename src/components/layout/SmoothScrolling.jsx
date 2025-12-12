@@ -1,41 +1,52 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import Lenis from "lenis";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { usePathname } from "next/navigation"; // 1. Import this to track page changes
 
 export default function SmoothScrolling({ children }) {
+  const lenisRef = useRef(null); // 2. Create a ref to store the Lenis instance
+  const pathname = usePathname(); // 3. Get current path
+
+  // Initialize Lenis & GSAP
   useEffect(() => {
-    // 1. Initialize Lenis
     const lenis = new Lenis({
-      duration: 1.2, // Control speed (default 1.2)
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Default easing
+      duration: 1.2,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
       touchMultiplier: 2,
     });
 
-    // 2. Sync Lenis scroll with GSAP ScrollTrigger
-    // This ensures GSAP animations update exactly when Lenis scrolls
+    // Save the instance to the ref so we can use it elsewhere
+    lenisRef.current = lenis;
+
     lenis.on("scroll", ScrollTrigger.update);
 
-    // 3. Add Lenis's requestAnimationFrame (raf) to GSAP's ticker
-    // This ensures both libraries update on the exact same frame (no jitter)
-    gsap.ticker.add((time) => {
-      lenis.raf(time * 1000); // Convert to milliseconds
-    });
+    const update = (time) => {
+      lenis.raf(time * 1000);
+    };
 
-    // 4. Disable GSAP lag smoothing to prevent stuttering
+    gsap.ticker.add(update);
     gsap.ticker.lagSmoothing(0);
 
-    // Cleanup function
     return () => {
-      gsap.ticker.remove((time) => lenis.raf(time * 1000));
+      gsap.ticker.remove(update);
       lenis.destroy();
+      lenisRef.current = null;
     };
   }, []);
+
+  // 4. RESET SCROLL ON PAGE CHANGE
+  useEffect(() => {
+    if (lenisRef.current) {
+      // { immediate: true } skips the smooth animation and snaps to top instantly
+      lenisRef.current.scrollTo(0, { immediate: true });
+    }
+  }, [pathname]); // Runs every time the URL changes
 
   return <>{children}</>;
 }

@@ -3,15 +3,30 @@
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 import Image from "next-image-export-optimizer";
-import { usePathname } from "next/navigation"; // Hook to check active route
+import { usePathname } from "next/navigation";
 import { Twirl as Hamburger } from "hamburger-react";
-import { navItems } from "@/constants"; // Ensure this path is correct
+import { navItems } from "@/constants";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
   const mobileNavRef = useRef(null);
   const hamburgerRef = useRef(null);
-  const pathname = usePathname(); // Get current URL (e.g., "/contacts")
+  const pathname = usePathname();
+
+  // Helper to check if link is active (Handles trailing slashes)
+  const isLinkActive = (href) => {
+    // 1. Exact match (e.g., "/about" === "/about")
+    if (pathname === href) return true;
+
+    // 2. Handle trailing slash match (e.g., "/about/" matches "/about")
+    if (pathname === `${href}/`) return true;
+
+    // 3. (Optional) Active for sub-pages (e.g., "/products/generator" keeps "Products" active)
+    // Only apply if href is not home "/" to avoid highlighting Home on every page
+    if (href !== "/" && pathname.startsWith(`${href}/`)) return true;
+
+    return false;
+  };
 
   // Close navbar if click outside
   useEffect(() => {
@@ -44,7 +59,7 @@ const Navbar = () => {
       >
         <ul className="space-y-4">
           {navItems.map((link) => {
-            const isActive = pathname === link.href;
+            const isActive = isLinkActive(link.href);
             return (
               <li className="relative group" key={link.href}>
                 <Link
@@ -79,10 +94,10 @@ const Navbar = () => {
             <Image
               src="/images/lja-logo.webp"
               alt="LJA Power Limited Co Logo"
-              width={40} // Sets intrinsic size
+              width={40}
               height={40}
               className="rounded-full w-10 h-10 object-contain group-hover:rotate-12 transition-transform duration-500"
-              priority // Loads immediately for SEO
+              priority
             />
             <div className="flex flex-col justify-center leading-none">
               <span className="font-heading text-xl font-bold tracking-wide text-white group-hover:text-(--accent-yellow) transition-colors">
@@ -98,7 +113,7 @@ const Navbar = () => {
             {/* Desktop Menu */}
             <ul className="lg:flex hidden items-center gap-8">
               {navItems.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = isLinkActive(link.href);
                 return (
                   <li
                     className="relative group flex flex-col items-center justify-center"
@@ -106,7 +121,7 @@ const Navbar = () => {
                   >
                     <Link
                       href={link.href}
-                      className={`relative text-sm font-heading uppercase tracking-wider transition-all duration-300 transform after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-(--accent-yellow)r:transition-all after:duration-300 ${
+                      className={`relative text-sm font-heading uppercase tracking-wider transition-all duration-300 transform after:absolute after:left-0 after:bottom-0 after:h-0.5 after:bg-(--accent-yellow) after:transition-all after:duration-300 ${
                         isActive
                           ? "text-(--accent-yellow) -translate-y-0.5 after:w-full after:translate-y-1"
                           : "text-white hover:text-(--accent-yellow) hover:-translate-y-0.5 after:w-0 hover:after:w-full hover:after:translate-y-1"

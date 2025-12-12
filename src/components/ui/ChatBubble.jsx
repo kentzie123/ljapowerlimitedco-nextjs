@@ -76,7 +76,7 @@ const ChatBubble = ({ message, isMine }) => {
                 // Document File
                 <div className="bg-white dark:bg-gray-800 rounded-lg border border-gray-300 p-3 max-w-xs">
                   <div className="flex items-center gap-3">
-                    <div className="text-blue-600 flex-shrink-0">
+                    <div className="text-blue-600 shrink-0">
                       {getFileIcon(file)}
                     </div>
                     <div className="flex-1 min-w-0">
@@ -91,7 +91,7 @@ const ChatBubble = ({ message, isMine }) => {
                       href={file.url}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-gray-500 hover:text-blue-600 transition-colors flex-shrink-0"
+                      className="text-gray-500 hover:text-blue-600 transition-colors shrink-0"
                       title="Download file"
                     >
                       <Download className="size-4" />

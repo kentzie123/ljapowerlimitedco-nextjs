@@ -1,7 +1,6 @@
 import OurWorkDetailsPage from "@/components/pages/OurWorkDetailsPage";
 import { works } from "@/constants";
 
-
 export async function generateStaticParams() {
   return works.map((work) => ({
     slug: work.slug,
@@ -17,6 +16,10 @@ export async function generateMetadata({ params }) {
     return {
       title: "Project Not Found | LJA Power Limited Co",
       description: "The project you are looking for does not exist.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 

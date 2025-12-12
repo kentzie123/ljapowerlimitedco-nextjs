@@ -7,19 +7,16 @@ import SmoothScrolling from "@/components/layout/SmoothScrolling";
 import { ToastContainer } from "react-toastify";
 import ChatFloatingButton from "@/components/ui/ChatFloatingButton";
 
-// 1. VIEWPORT & THEME COLOR
-// In Next.js, these are exported separately from metadata
+// Top Loader
+import NextTopLoader from "nextjs-toploader";
+
 export const viewport = {
   width: "device-width",
   initialScale: 1,
   themeColor: "#0c2430",
 };
 
-// 2. METADATA (Replaces <title>, <meta>, and <link rel="icon">)
-// src/app/layout.js
-
 export const metadata = {
-  // 1. Base Title (template allows child pages to auto-append the brand name)
   title: {
     default: "LJA Power Limited Co",
   },
@@ -34,7 +31,7 @@ export const metadata = {
     title: "LJA Power Limited Co",
     description:
       "Supplier of diesel generators and provider of complete power generation services across the Philippines.",
-    siteName: "LJA Power Limited Co", // ✅ SITE NAME DECLARED HERE
+    siteName: "LJA Power Limited Co",
     images: [
       {
         url: "https://ljapowerlimitedco.com/images/hero1.webp",
@@ -137,6 +134,17 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="antialiased bg-base-100 text-base-content">
+        <NextTopLoader
+          color="#FFD700" // Your accent yellow color (or use var(--accent-yellow) if supported, but hex is safer here)
+          initialPosition={0.08}
+          crawlSpeed={200}
+          height={3}
+          crawl={true}
+          showSpinner={false} // True if you want a spinner top-right, False for just the bar
+          easing="ease"
+          speed={200}
+          shadow="0 0 10px #FFD700,0 0 5px #FFD700" // Glow effect
+        />
         <ToastContainer />
         <ChatFloatingButton />
         <SmoothScrolling>

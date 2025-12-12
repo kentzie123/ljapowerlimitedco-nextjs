@@ -20,6 +20,7 @@
     "lucide-react": "^0.559.0",
     "next": "16.0.8",
     "next-image-export-optimizer": "^1.19.0",
+    "nextjs-toploader": "^3.9.17",
     "react": "19.2.1",
     "react-dom": "19.2.1",
     "react-google-recaptcha": "^3.1.0",
