@@ -84,8 +84,7 @@ const HomeCallToAction = () => {
         <div className="flex flex-col sm:flex-row items-center gap-4 pt-4">
           {/* Button 1: Solid Dark */}
           <Link
-            href="/contact" // Next.js uses 'href'
-            // Fixed: bg-[var(--bg-dark)] -> bg-(--bg-dark)
+            href="/contacts"
             className="btm-hp-btn bg-(--bg-dark) text-white hover:bg-black px-8 py-4 rounded-lg font-heading font-bold uppercase tracking-wider transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
           >
             Contact Us Today

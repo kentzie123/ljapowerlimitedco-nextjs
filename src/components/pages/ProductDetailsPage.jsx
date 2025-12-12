@@ -236,7 +236,7 @@ const ProductDetailsPage = () => {
             {/* CTA Buttons */}
             <div className="mt-auto space-y-4">
               <Link
-                href="/contact"
+                href="/contacts"
                 onClick={() => {
                   addSelectedProduct(product);
                 }}

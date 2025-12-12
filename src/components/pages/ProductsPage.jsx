@@ -390,7 +390,7 @@ const ProductsPage = () => {
             </p>
 
             <Link
-              href="/contact"
+              href="/contacts"
               className="btn-yellow inline-flex px-8 py-4 text-base"
             >
               Get Expert Consultation

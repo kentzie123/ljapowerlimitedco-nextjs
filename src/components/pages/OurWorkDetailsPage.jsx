@@ -104,7 +104,7 @@ const OurWorkDetailsPage = () => {
 
             <div className="flex flex-wrap gap-4 pt-4">
               <Link
-                href="/contact"
+                href="/contacts"
                 className="btn-yellow font-heading uppercase tracking-wider px-8 py-4 text-sm"
               >
                 Request Quote
@@ -254,7 +254,7 @@ const OurWorkDetailsPage = () => {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mt-4">
             <Link
-              href="/contact"
+              href="/contacts"
               className="btn-yellow font-heading uppercase tracking-wider px-10 py-4"
             >
               Get in Touch

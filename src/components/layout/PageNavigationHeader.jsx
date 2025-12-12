@@ -15,7 +15,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-// Register Plugin (Safe to do here for this component)
+// Register Plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const PageNavigationHeader = ({
@@ -24,7 +24,6 @@ const PageNavigationHeader = ({
   p,
   id,
   src,
-  // srcSet is removed; Next.js handles responsive images automatically via <Image />
   backgroundAlt = "Hero image",
   breadcrumbs = [{ label: "Home", to: "/" }, { label: "Product" }],
 }) => {
@@ -67,7 +66,6 @@ const PageNavigationHeader = ({
   return (
     <>
       {/* Yellow Shape Background */}
-      {/* Fixed: bg-[var(--accent-yellow)] -> bg-(--accent-yellow) */}
       <div
         className="absolute top-0 left-0 h-[400px] w-full bg-(--accent-yellow)/70 translate-y-1.5 z-0 pointer-events-none will-change-transform"
         style={{
@@ -87,22 +85,22 @@ const PageNavigationHeader = ({
           src={src}
           alt={backgroundAlt}
           fill
-          priority // Hero image should load immediately
-          placeholder="blur" // Only works if src is an import, ignored if string path
-          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=" // Fallback for string paths
+          preload={true} // 1. Tells Next.js to preload this
+          fetchPriority="high" // 2. Explicitly sets browser fetch priority
+          loading="eager" // 3. Ensures no lazy loading
+          placeholder="blur"
+          blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
           className="absolute inset-0 object-cover"
           sizes="100vw"
         />
 
         {/* Overlay */}
-        {/* Fixed: bg-[var(--bg-dark)] -> bg-(--bg-dark) */}
         <div className="absolute top-0 inset-0 bg-(--bg-dark)/90" />
 
         <div className="relative max-w-7xl mx-auto text-center space-y-6 px-4">
           {/* Main Title */}
           <h1
             ref={titleRef}
-            // Fixed: text-[var(--accent-yellow)] -> text-(--accent-yellow)
             className="will-change-transform font-heading text-4xl md:text-6xl lg:text-7xl font-bold uppercase tracking-tight leading-none text-(--accent-yellow)"
           >
             <span className="text-white">{h1}</span> {h1Yellow}
@@ -128,12 +126,10 @@ const PageNavigationHeader = ({
                 return (
                   <li key={`crumb-${index}`} className="flex items-center">
                     {index > 0 && (
-                      // Fixed: text-[var(--accent-yellow)] -> text-(--accent-yellow)
                       <ChevronRight className="size-4 text-(--accent-yellow) mx-2" />
                     )}
 
                     {isLast ? (
-                      // Fixed: text-[var(--accent-yellow)] -> text-(--accent-yellow)
                       <span
                         className="text-(--accent-yellow)"
                         aria-current="page"
@@ -142,9 +138,7 @@ const PageNavigationHeader = ({
                       </span>
                     ) : (
                       <Link
-                        href={crumb.to || crumb.href || "#"} // Handle 'to' or 'href' prop
-                        // Fixed: hover:text-[var(--accent-yellow)] -> hover:text-(--accent-yellow)
-                        // Fixed: hover:border-[var(--accent-yellow)] -> hover:border-(--accent-yellow)
+                        href={crumb.to || crumb.href || "#"}
                         className="hover:text-(--accent-yellow) transition-colors border-b border-transparent hover:border-(--accent-yellow)"
                       >
                         {crumb.label}

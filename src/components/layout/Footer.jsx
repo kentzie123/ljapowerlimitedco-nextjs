@@ -56,7 +56,7 @@ const Footer = () => {
               { name: "Products", href: "/products" },
               { name: "Services", href: "/services" },
               { name: "Our Works", href: "/our-works" },
-              { name: "Contact Us", href: "/contact" },
+              { name: "Contact Us", href: "/contacts" },
             ].map((link) => (
               <li key={link.name}>
                 <Link
@@ -135,7 +135,7 @@ const Footer = () => {
           <p className="text-(--muted-gray) text-xs">
             Need assistance?{" "}
             <Link
-              href="/contact"
+              href="/contacts"
               className="text-(--accent-yellow) font-semibold hover:underline transition"
             >
               Contact us today.

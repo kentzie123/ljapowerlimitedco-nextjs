@@ -152,7 +152,7 @@ const OurWorksPage = () => {
 
           <div className="flex justify-center">
             <Link
-              href="/contact"
+              href="/contacts"
               className="btn-yellow px-10 py-4 text-base font-heading font-bold uppercase tracking-wider"
             >
               Schedule Consultation

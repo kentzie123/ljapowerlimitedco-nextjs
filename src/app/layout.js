@@ -5,6 +5,7 @@ import SmoothScrolling from "@/components/layout/SmoothScrolling";
 
 // TOAST CONTAINER
 import { ToastContainer } from "react-toastify";
+import ChatFloatingButton from "@/components/ui/ChatFloatingButton";
 
 // 1. VIEWPORT & THEME COLOR
 // In Next.js, these are exported separately from metadata
@@ -137,6 +138,7 @@ export default function RootLayout({ children }) {
 
       <body className="antialiased bg-base-100 text-base-content">
         <ToastContainer />
+        <ChatFloatingButton />
         <SmoothScrolling>
           <Navbar />
           <main>{children}</main>

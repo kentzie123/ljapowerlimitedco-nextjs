@@ -280,7 +280,7 @@ const ServicesPage = () => {
                 {/* Action Link */}
                 <div className="pt-4">
                   <Link
-                    href="/contact"
+                    href="/contacts"
                     // Fixed: text-[var(--accent-yellow)] -> text-(--accent-yellow)
                     className="group inline-flex items-center gap-2 text-(--accent-yellow) font-heading uppercase font-bold tracking-wider hover:text-white transition-colors"
                   >
@@ -356,7 +356,7 @@ const ServicesPage = () => {
 
           <div className="flex justify-center">
             <Link
-              href="/contact"
+              href="/contacts"
               className="btn-yellow px-10 py-4 text-base font-heading font-bold uppercase tracking-wider shadow-[0_0_20px_rgba(246,231,42,0.4)] hover:shadow-[0_0_30px_rgba(246,231,42,0.6)]"
             >
               Get a free quote today!
