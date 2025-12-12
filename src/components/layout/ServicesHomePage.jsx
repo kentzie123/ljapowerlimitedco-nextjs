@@ -5,7 +5,7 @@ import { Check } from "lucide-react";
 
 // Next.js Components
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 // GSAP
 import gsap from "gsap";

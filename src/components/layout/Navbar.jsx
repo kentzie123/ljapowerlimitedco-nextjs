@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import { usePathname } from "next/navigation"; // Hook to check active route
 import { Twirl as Hamburger } from "hamburger-react";
 import { navItems } from "@/constants"; // Ensure this path is correct

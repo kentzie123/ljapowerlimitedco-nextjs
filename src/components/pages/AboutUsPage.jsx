@@ -1,7 +1,7 @@
 "use client";
 
 // Next.js Components
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 // Components
 import PageNavigationHeader from "../layout/PageNavigationHeader";

@@ -1,6 +1,12 @@
 import ProductDetailsPage from "@/components/pages/ProductDetailsPage";
 import { generators } from "@/constants";
 
+export async function generateStaticParams() {
+  return generators.map((product) => ({
+    slug: product.slug,
+  }));
+}
+
 // 1. GENERATE METADATA (Dynamic SEO)
 export async function generateMetadata({ params }) {
   const { slug } = await params; // await params in Next.js 15+

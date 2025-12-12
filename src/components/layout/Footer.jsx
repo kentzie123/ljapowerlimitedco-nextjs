@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import { Facebook } from "lucide-react";
 
 const Footer = () => {

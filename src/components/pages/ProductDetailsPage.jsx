@@ -6,7 +6,7 @@ import { useParams, useRouter } from "next/navigation"; // Changed from react-ro
 
 // Next Components
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 // Components
 import SpecificationTab from "../layout/SpecificationTab";

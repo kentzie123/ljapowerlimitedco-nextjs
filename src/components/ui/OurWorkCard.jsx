@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import { MapPin, ArrowRight } from "lucide-react";
 
 const OurWorkCard = ({ project }) => {

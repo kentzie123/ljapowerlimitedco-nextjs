@@ -2,7 +2,7 @@
 
 // Routing
 import Link from "next/link";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 
 // Icons
 import { ChevronRight } from "lucide-react";

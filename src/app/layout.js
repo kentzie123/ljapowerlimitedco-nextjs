@@ -3,6 +3,9 @@ import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import SmoothScrolling from "@/components/layout/SmoothScrolling";
 
+// TOAST CONTAINER
+import { ToastContainer } from "react-toastify";
+
 // 1. VIEWPORT & THEME COLOR
 // In Next.js, these are exported separately from metadata
 export const viewport = {
@@ -133,6 +136,7 @@ export default function RootLayout({ children }) {
       </head>
 
       <body className="antialiased bg-base-100 text-base-content">
+        <ToastContainer />
         <SmoothScrolling>
           <Navbar />
           <main>{children}</main>

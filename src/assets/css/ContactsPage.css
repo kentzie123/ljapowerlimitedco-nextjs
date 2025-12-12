@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+@layer components {
+  .contact-form {
+    label {
+      @apply text-(--white) text-sm font-medium mb-1 block;
+    }
+
+    input,
+    textarea,
+    select {
+      @apply w-full rounded-md border border-(--card-blue) 
+             bg-(--bg-dark) text-(--white) placeholder-(--muted-gray)
+             px-3 py-2 outline-none transition-all duration-200 text-sm;
+    }
+
+    input:focus,
+    textarea:focus,
+    select:focus {
+      @apply border-(--accent-yellow) ring-1 ring-(--accent-yellow);
+    }
+
+    input::placeholder,
+    textarea::placeholder,
+    select::placeholder {
+      color: var(--muted-gray);
+      opacity: 0.5;
+    }
+
+    /* Custom animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-8px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-fadeIn {
+      animation: fadeIn 0.2s ease-out;
+    }
+
+    /* Scrollbar styling for dropdown */
+    .overflow-y-auto {
+      scrollbar-width: thin;
+      scrollbar-color: var(--card-blue) var(--bg-dark);
+    }
+
+    .overflow-y-auto::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .overflow-y-auto::-webkit-scrollbar-track {
+      background: var(--bg-dark);
+    }
+
+    .overflow-y-auto::-webkit-scrollbar-thumb {
+      background-color: var(--card-blue);
+      border-radius: 3px;
+    }
+  }
+}

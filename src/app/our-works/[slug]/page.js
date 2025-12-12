@@ -1,6 +1,13 @@
 import OurWorkDetailsPage from "@/components/pages/OurWorkDetailsPage";
 import { works } from "@/constants";
 
+
+export async function generateStaticParams() {
+  return works.map((work) => ({
+    slug: work.slug,
+  }));
+}
+
 // 1. DYNAMIC METADATA
 export async function generateMetadata({ params }) {
   const { slug } = await params;

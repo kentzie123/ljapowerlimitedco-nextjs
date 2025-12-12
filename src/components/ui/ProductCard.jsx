@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+import Image from "next-image-export-optimizer";
 import Link from "next/link";
 import { Zap, ShieldCheck, Fuel, Gauge } from "lucide-react";
 

@@ -2,7 +2,7 @@ import OurWorksPage from "@/components/pages/OurWorksPage";
 import { works } from "@/constants";
 
 export const metadata = {
-  title: "Field Operations Gallery | LJA Power Limited Co",
+  title: "Our Works | LJA Power Limited Co",
   description:
     "Browse our recent generator installations, deliveries, preventive maintenance work, and client success stories across the Philippines.",
   openGraph: {
