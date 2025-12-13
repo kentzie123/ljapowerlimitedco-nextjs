@@ -5,6 +5,9 @@ export const metadata = {
   title: "Our Works | LJA Power Limited Co",
   description:
     "Browse our recent generator installations, deliveries, preventive maintenance work, and client success stories across the Philippines.",
+    alternates: {
+    canonical: "https://ljapowerlimitedco.com/our-works",
+  },
   // ⛔️ THIS BLOCKS GOOGLE
   robots: {
     index: false,

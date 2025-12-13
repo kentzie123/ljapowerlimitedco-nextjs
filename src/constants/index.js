@@ -19,7 +19,7 @@ const generators = [
       "/images/faw3.webp",
       "/images/faw4.webp",
     ],
-    standbyPower: "12 Kw/ 5 Kva",
+    standbyPower: "12 Kw/ 15 Kva",
     primePower: "13KVA/11KW",
     engine: "FAWDE 4DW81-38D",
     speed: "1800 rpm",

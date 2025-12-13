@@ -5,6 +5,9 @@ export const metadata = {
   title: "Contact Us | LJA Power Limited Co",
   description:
     "Get in touch with LJA Power Limited Co Call +63-915-749-5102 or visit our branches in the Philippines for your generator needs.",
+  alternates: {
+    canonical: "https://ljapowerlimitedco.com/contacts",
+  },
   openGraph: {
     title: "Contact Us | LJA Power Limited Co",
     description:

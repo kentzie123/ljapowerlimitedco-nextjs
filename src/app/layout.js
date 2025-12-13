@@ -114,10 +114,8 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    // 4. HTML TAG ATTRIBUTES
     <html lang="en">
       <head>
-        {/* 5. MANUAL PRELOAD LINKS (If not using next/font) */}
         <link
           rel="preload"
           href="/fonts/font-heading.woff2"
@@ -126,7 +124,6 @@ export default function RootLayout({ children }) {
           crossOrigin="anonymous"
         />
 
-        {/* 6. INJECT JSON-LD SCHEMA */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(globalSchema) }}

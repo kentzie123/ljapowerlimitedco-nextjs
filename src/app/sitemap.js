@@ -1,4 +1,5 @@
-import { generators, works, contacts } from "@/constants";
+import { generators, contacts } from "@/constants";
+// 1. Removed 'works' from import because those pages are noindex (blocked)
 
 export const dynamic = "force-static";
 
@@ -11,39 +12,32 @@ export default function sitemap() {
     "/about",
     "/products",
     "/services",
-    "/our-works",
     "/contacts",
+    // Removed "/our-works" because we set it to robot: noindex
   ].map((route) => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date(),
     changeFrequency: "monthly",
     priority: route === "" ? 1 : 0.8,
+    // REMOVED: lastModified (Better to have no date than a fake date)
   }));
 
   // 2. Generate URLs for all Products
   const productUrls = generators.map((product) => ({
     url: `${baseUrl}/products/${product.slug}`,
-    lastModified: new Date(),
     changeFrequency: "weekly",
     priority: 0.9,
   }));
 
-  // 3. Generate URLs for all "Our Works" projects
-  const workUrls = works.map((work) => ({
-    url: `${baseUrl}/our-works/${work.slug}`,
-    lastModified: new Date(),
-    changeFrequency: "monthly",
-    priority: 0.7,
-  }));
+  // 3. REMOVED: "Our Works" logic
+  // (Don't put blocked pages in a sitemap)
 
   // 4. Generate URLs for Branch Location pages
   const branchUrls = contacts.map((contact) => ({
     url: `${baseUrl}/branches/${contact.slug}`,
-    lastModified: new Date(),
     changeFrequency: "yearly",
     priority: 0.6,
   }));
 
   // 5. Combine everything
-  return [...staticPages, ...productUrls, ...workUrls, ...branchUrls];
+  return [...staticPages, ...productUrls, ...branchUrls];
 }

@@ -25,6 +25,9 @@ const { min, max } = getPowerRange();
 export const metadata = {
   title: "Diesel Generators Catalogue | LJA Power Limited Co",
   description: `Browse ${generators.length} diesel generators (${min}-${max}kVA) from top brands like FAW, Cummins & Isuzu. Philippines Supplier.`,
+  alternates: {
+    canonical: "https://ljapowerlimitedco.com/products",
+  },
   openGraph: {
     title: "Diesel Generators Catalogue | LJA Power Limited Co",
     description: `Browse ${generators.length} diesel generators (${min}-${max}kVA) from top brands like FAW, Cummins & Isuzu. Philippines Supplier.`,

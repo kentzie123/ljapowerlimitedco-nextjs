@@ -27,6 +27,9 @@ export async function generateMetadata({ params }) {
     description:
       product.description ||
       `Buy ${product.name} generator. Reliable power solutions from LJA Power Limited Co.`,
+    alternates: {
+      canonical: `https://ljapowerlimitedco.com/products/${slug}`,
+    },
     openGraph: {
       title: product.name,
       description: product.description,

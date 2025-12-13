@@ -5,6 +5,9 @@ export const metadata = {
     "Generator Services | Maintenance & Installation | LJA Power Limited Co",
   description:
     "Professional generator services: preventive maintenance, ATS installation, troubleshooting & repairs. 24/7 support across Philippines. LJA Power Limited Co",
+  alternates: {
+    canonical: "https://ljapowerlimitedco.com/services",
+  },
   openGraph: {
     title: "Generator Services | Maintenance & Installation",
     description:

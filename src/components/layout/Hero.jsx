@@ -77,9 +77,9 @@ const Hero = () => {
       <div className="flex flex-col section-container text-white space-y-6 relative z-10">
         {/* 1. TAGLINE */}
         <div className="overflow-hidden font-heading text-(--accent-yellow) font-bold tracking-[0.2em] uppercase text-sm md:text-base">
-          <h2 className="will-appear">
+          <div className="will-appear">
             Powering Progress, Comfort, and Connection ⚡️
-          </h2>
+          </div>
         </div>
 
         {/* 2. MAIN HEADING */}

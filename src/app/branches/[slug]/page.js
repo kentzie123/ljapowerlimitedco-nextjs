@@ -1,7 +1,6 @@
 import BranchContactPage from "@/components/pages/BranchContactPage";
 import { contacts } from "@/constants";
 
-
 export async function generateStaticParams() {
   return contacts.map((contact) => ({
     slug: contact.slug,
@@ -23,6 +22,9 @@ export async function generateMetadata({ params }) {
   return {
     title: `${branchData.office} | Contact LJA Power`,
     description: `Contact LJA Power Limited Co in ${branchData.office}. Call ${branchData.number} for generator sales, installation, and maintenance.`,
+    alternates: {
+      canonical: `https://ljapowerlimitedco.com/branches/${branchData.slug}`,
+    },
     openGraph: {
       title: `${branchData.office} | Contact LJA Power`,
       description: `Contact LJA Power Limited Co in ${branchData.office}. Call ${branchData.number}.`,

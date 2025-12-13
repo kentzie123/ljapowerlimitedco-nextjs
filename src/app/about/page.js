@@ -5,6 +5,9 @@ export const metadata = {
   title: "About Us | LJA Power Limited Co",
   description:
     "Learn about LJA Power Limited Co's mission to deliver reliable power solutions in Philippines. Discover our vision for quality generators & 24/7 support.",
+  alternates: {
+    canonical: "https://ljapowerlimitedco.com/about",
+  },
   openGraph: {
     title: "About Us | LJA Power Limited Co",
     description:
