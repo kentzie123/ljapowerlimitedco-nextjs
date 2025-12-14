@@ -26,14 +26,15 @@ const ChatFloatingButton = () => {
   const [openChat, setOpenChat] = useState(false);
 
   const openChatBox = async () => {
-    setOpenChat(true); // Triggers the download
+    connectSocket();
+
+    setOpenChat(true);
     const isClientHaveData = await fetchClientLocalData();
 
     if (!isClientHaveData) {
       console.log(`No clientId: ${clientId}`);
       createClientAccount();
     }
-    connectSocket();
   };
 
   return (

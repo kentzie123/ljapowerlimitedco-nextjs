@@ -23,7 +23,6 @@ export const useAuthStore = create((set, get) => ({
   socket: null,
 
   connectSocket: () => {
-    // ✅ FIX: Use process.env.NEXT_PUBLIC_API_URL
     const socket = io(process.env.NEXT_PUBLIC_API_URL, {
       query: {
         userId: get().clientId,
