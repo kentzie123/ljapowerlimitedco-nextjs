@@ -98,103 +98,6 @@ const generators = [
     },
   },
   {
-    name: "PGS-1-25-F",
-    slug: "pgs-1-25-f",
-    category: "faw-diesel",
-    images: [
-      "/images/faw1.webp",
-      "/images/faw2.webp",
-      "/images/faw3.webp",
-      "/images/faw4.webp",
-    ],
-    standbyPower: "20 Kw/ 25 Kva",
-    primePower: "18 Kw/ 22 Kva",
-    engine: "FAWDE 4DW91-38D",
-    speed: "1800rpm",
-    frequency: "60Hz",
-    fuelType: "Diesel",
-    startingVoltage: "24v",
-    voltageOptions:
-      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
-    dimensions: "L 225 x W 95 x H 125 cm",
-    weight: "810 Kgs",
-    fuelCapacity: "Good for 8 Hours",
-    connectionMode: "Single Phase",
-    speedControl: "Electronically",
-    type: "Silent",
-
-    engineSpecs: {
-      cylinders: "4 inline",
-      aspiration: "Natural aspiration",
-      cycle: "4",
-      combustion: "Direct Injection",
-      cooling: "Water Cooled",
-      boreStroke: "90×100",
-      compression: "17:1",
-      displacement: "2.54 L",
-    },
-
-    alternatorSpecs: {
-      technology: "Stamford Technology",
-      insulation: "Class H",
-      excitation: "Self-Excitation or PMG",
-      protection: "Ip23",
-    },
-
-    features: [
-      "SMARTGEN Genset Digital Control",
-      "Auto / Manual Start Operation",
-      "Engine Protection Device Monitoring an extensive number of engine parameters",
-      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
-      "Automatic Battery Charger",
-      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
-      "Two stage charging method (constant current firstly and then constant voltage)",
-      "SWG Genset Starting Battery",
-      "High Performance Generator Sets Battery Maintenance Free",
-      "Nano-Technology, reducing the possibility of batteries catching fire",
-      "Less flammable electrode material",
-      "Increasing the available power from a battery",
-      "Avoid overcharging and extend battery life to the fullest",
-      "With short circuit and reverse connection protection",
-      "Decreasing the time required to recharged a battery",
-      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
-      "Special integrated steel skid base tank with enamel paint",
-      "Emergency push stop button, mounted on Enclosure exterior",
-      "Steel locks and hinges",
-      "Large residential muffler for silent operation",
-      "Safely enclosed exhaust silencing system",
-      "Genset Mobile Trail Type (Optional)",
-    ],
-
-    applications: [
-      "Small industrial plants",
-      "Retail establishments",
-      "Medical clinics",
-      "Residential complexes",
-      "Construction sites",
-      "Telecommunications infrastructure",
-      "Agricultural applications",
-    ],
-
-    certifications: {
-      engine: "ISO 3046, BS 5514, DIN 6271",
-      alternator:
-        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
-    },
-
-    description:
-      "25 KVA diesel generator set with FAWDE engine featuring SMARTGEN digital control, automatic battery charger with two-stage charging, and nano-technology battery safety features. Includes sound proof/weather proof steel enclosure and comprehensive engine protection system.",
-
-    operationConditions: {
-      altitude: "1500m",
-      temperature: "40°C",
-      derating: "1% per 100m above 1500m",
-      standbyOperation:
-        "500 hours during one year (300 hours for continues use)",
-      overloadCapacity: "10%",
-    },
-  },
-  {
     name: "PGS-1-35-F",
     slug: "pgs-1-35-f",
     category: "faw-diesel",
@@ -5479,6 +5382,1964 @@ const generators = [
     },
     description:
       "50 KVA three phase diesel generator set with ISUZU engine featuring Woodward easYgen control system, automatic battery charger with two-stage charging, and nano-technology battery safety features. Includes sound proof/weather proof steel enclosure and comprehensive engine protection system.",
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  // SDEC Single Phase
+
+  {
+    name: "PGS-1-15-SD",
+    slug: "pgs-1-15-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "12 Kw/ 15 Kva",
+    primePower: "11 Kw/ 13 Kva",
+    engine: "SDEC 4DW81-38D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "12v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 220 x W 95 x H 125 cm",
+    weight: "N/A",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Turbo Charged",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102mm x 115mm",
+      compression: "N/A",
+      displacement: "3.8L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology Brushless",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN 6110U Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+    ],
+
+    applications: [
+      "Small industrial plants",
+      "Retail establishments",
+      "Medical clinics",
+      "Residential complexes",
+      "Telecommunications infrastructure",
+      "Small business backup",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "15 KVA diesel generator set with SDEC engine featuring SMARTGEN 6110U digital control, automatic battery charger with nano-technology safety features, and a sound-proof/weather-proof steel enclosure. Designed for high efficiency and silent operation.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-25-SD",
+    slug: "pgs-1-25-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "20 Kw/ 25 Kva",
+    primePower: "18 Kw/ 22 Kva",
+    engine: "SDEC 4DW91-38D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 225 x W 95 x H 125 cm",
+    weight: "810 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "90×100",
+      compression: "17:1",
+      displacement: "2.54 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Small industrial plants",
+      "Retail establishments",
+      "Medical clinics",
+      "Residential complexes",
+      "Construction sites",
+      "Telecommunications infrastructure",
+      "Agricultural applications",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "25 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control, automatic battery charger with two-stage charging, and nano-technology battery safety features. Includes sound proof/weather proof steel enclosure and comprehensive engine protection system.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-35-SD",
+    slug: "pgs-1-35-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "28 Kw/ 35 Kva",
+    primePower: "25 Kw/ 31 Kva",
+    engine: "SDEC 4DW92-42D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 230 x W 95 x H 125 cm",
+    weight: "870 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "90×100",
+      compression: "17:1",
+      displacement: "2.54 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Small industrial plants",
+      "Retail establishments",
+      "Medical clinics",
+      "Residential complexes",
+      "Construction sites",
+      "Telecommunications infrastructure",
+      "Agricultural applications",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "35 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control, automatic battery charger, and sound-proof steel enclosure. Reliable power solution with comprehensive engine monitoring and protection.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-50-SD",
+    slug: "pgs-1-50-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "40 Kw/ 50 Kva",
+    primePower: "36 Kw/ 45 Kva",
+    engine: "SDEC 4DX21-61D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 235 x W 95 x H 135 cm",
+    weight: "870 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Medium industrial plants",
+      "Commercial buildings",
+      "Medical facilities",
+      "Large residential complexes",
+      "Construction sites",
+      "Telecommunications infrastructure",
+      "Agricultural processing",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "50 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control, automatic battery charger, and sound-proof steel enclosure. A robust power solution designed for high efficiency and reliability.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-60-SD",
+    slug: "pgs-1-60-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "48 Kw/ 60 Kva",
+    primePower: "43 Kw/ 54 Kva",
+    engine: "SDEC 4DX22-75D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 235 x W 95 x H 135 cm",
+    weight: "870 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Medium industrial plants",
+      "Commercial buildings",
+      "Medical facilities",
+      "Large residential complexes",
+      "Construction sites",
+      "Telecommunications infrastructure",
+      "Agricultural processing",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "60 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control, automatic battery charger, and sound-proof steel enclosure. A robust power solution designed for high efficiency and reliability in commercial and industrial applications.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-75-SD",
+    slug: "pgs-1-75-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "60 Kw/ 75 Kva",
+    primePower: "55 Kw/ 69 Kva",
+    engine: "SDEC 4DX23-90D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 255 x W 105 x H 135 cm",
+    weight: "900 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Medium industrial plants",
+      "Commercial buildings",
+      "Medical facilities",
+      "Large residential complexes",
+      "Construction sites",
+      "Telecommunications infrastructure",
+      "Agricultural processing",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "75 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control, automatic battery charger, and sound-proof steel enclosure. A powerful and reliable energy solution for commercial and industrial needs.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-100-SD",
+    slug: "pgs-1-100-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "80 Kw/ 100 Kva",
+    primePower: "72 Kw/ 90 Kva",
+    engine: "SDEC 6A4DF2-14D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 255 x W 105 x H 135 cm",
+    weight: "900 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial plants",
+      "Hospitals",
+      "Shopping malls",
+      "High-rise buildings",
+      "Data centers",
+      "Construction projects",
+      "Mining operations",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "100 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control, automatic battery charger, and sound-proof steel enclosure. A high-capacity power solution designed for heavy-duty industrial and commercial applications.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-125-SD",
+    slug: "pgs-1-125-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "100 Kw/ 125 Kva",
+    primePower: "90 Kw/ 112 Kva",
+    engine: "SDEC CA6DF2D-16D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 255 x W 105 x H 135 cm",
+    weight: "900 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial plants",
+      "Hospitals",
+      "Shopping malls",
+      "High-rise buildings",
+      "Data centers",
+      "Construction projects",
+      "Mining operations",
+      "Events and entertainment",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "125 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and a sound-proof steel enclosure. Delivers reliable, high-capacity power for critical industrial and commercial standby requirements.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-150-SD",
+    slug: "pgs-1-150-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "120 Kw/ 150 Kva",
+    primePower: "108 Kw/ 135 Kva",
+    engine: "SDEC CA6DF2D-21D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 330 x W 120 x H 200 cm",
+    weight: "1200 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial facilities",
+      "Data centers",
+      "Hospitals",
+      "High-rise commercial buildings",
+      "Shopping malls",
+      "Construction & Mining",
+      "Hotels and resorts",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "150 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and sound-proof steel enclosure. A heavy-duty power solution providing reliable backup for critical large-scale applications.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-175-SD",
+    slug: "pgs-1-175-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "140 Kw/ 175 Kva",
+    primePower: "128 Kw/ 160 Kva",
+    engine: "SDEC CA6DF2D-21D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 330 x W 120 x H 200 cm",
+    weight: "1200 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial facilities",
+      "Data centers",
+      "Hospitals",
+      "High-rise commercial buildings",
+      "Shopping malls",
+      "Construction & Mining",
+      "Hotels and resorts",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "175 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and sound-proof steel enclosure. A robust power solution designed for high-demand industrial and commercial environments.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-1-200-SD",
+    slug: "pgs-1-200-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "165 Kw/ 200 Kva",
+    primePower: "150 Kw/ 188 Kva",
+    engine: "SDEC CA6DL1-27D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 300 x W 120 x H 200 cm",
+    weight: "1200 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Single Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Natural aspiration",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102x118",
+      compression: "17:1",
+      displacement: "3.86 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial facilities",
+      "Data centers",
+      "Hospitals",
+      "High-rise commercial buildings",
+      "Shopping malls",
+      "Construction & Mining",
+      "Hotels and resorts",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "200 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and sound-proof steel enclosure. A high-capacity power solution designed for maximum reliability in critical applications.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  // SDEC Three Phase
+
+  {
+    name: "PGS-3-25-SD",
+    slug: "pgs-3-25-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "20 Kw/ 25 Kva",
+    primePower: "18 Kw/ 22 Kva",
+    engine: "SDEC 4DW81-38D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 225 x W 125 x H 95 cm",
+    weight: "780 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Naturally Aspirated",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "3.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Small commercial buildings",
+      "Retail outlets",
+      "Offices",
+      "Telecommunications sites",
+      "Residential backup",
+      "Construction",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "25 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A compact, three-phase power solution housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-35-SD",
+    slug: "pgs-3-35-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "28 Kw/ 35 Kva",
+    primePower: "25 Kw/ 31 Kva",
+    engine: "SDEC 4DW92-42D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 225 x W 125 x H 95 cm",
+    weight: "780 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Naturally Aspirated",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "3.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Small commercial buildings",
+      "Retail outlets",
+      "Offices",
+      "Telecommunications sites",
+      "Residential backup",
+      "Construction",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "35 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A compact, three-phase power solution housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-50-SD",
+    slug: "pgs-3-50-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "40 Kw/ 50 Kva",
+    primePower: "36 Kw/ 45 Kva",
+    engine: "SDEC 4DX21-61D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 225 x W 125 x H 95 cm",
+    weight: "780 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Naturally Aspirated",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "3.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Small industrial plants",
+      "Commercial buildings",
+      "Data centers",
+      "Telecommunications",
+      "Construction sites",
+      "Hotels and resorts",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "50 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A reliable three-phase power solution housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-60-SD",
+    slug: "pgs-3-60-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "48 Kw/ 60 Kva",
+    primePower: "44 Kw/ 55 Kva",
+    engine: "SDEC 4DX23-90D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 225 x W 125 x H 95 cm",
+    weight: "780 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Turbo charge",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "3.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Medium industrial plants",
+      "Commercial buildings",
+      "Data centers",
+      "Telecommunications",
+      "Construction sites",
+      "Hotels and resorts",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "60 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A reliable three-phase power solution housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-75-SD",
+    slug: "pgs-3-75-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "60 Kw/ 75 Kva",
+    primePower: "54 Kw/ 68 Kva",
+    engine: "SDEC 4DX23-90D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 255 x W 105 x H 135 cm",
+    weight: "900 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Turbo charge",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "3.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Medium industrial plants",
+      "Commercial buildings",
+      "Data centers",
+      "Telecommunications",
+      "Construction sites",
+      "Hotels and resorts",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "75 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A reliable three-phase power solution housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-100-SD",
+    slug: "pgs-3-100-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "80 Kw/ 100 Kva",
+    primePower: "72 Kw/ 90 Kva",
+    engine: "SDEC CA4DF2-14D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 255 x W 105 x H 135 cm",
+    weight: "900 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "4 inline",
+      aspiration: "Turbo charge",
+      cycle: "4",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "3.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial plants",
+      "Hospitals",
+      "Shopping malls",
+      "High-rise buildings",
+      "Data centers",
+      "Construction projects",
+      "Mining operations",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "100 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A reliable three-phase power solution housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-125-SD",
+    slug: "pgs-3-125-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "100 Kw/ 125 Kva",
+    primePower: "90 Kw/ 112 Kva",
+    engine: "SDEC CA6DF2D-16D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 295 x W 110 x H 165 cm",
+    weight: "1200 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "6 inline",
+      aspiration: "Turbo charge",
+      cycle: "6",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "5.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial plants",
+      "Hospitals",
+      "Shopping malls",
+      "High-rise buildings",
+      "Data centers",
+      "Construction projects",
+      "Mining operations",
+      "Events and entertainment",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "125 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A powerful three-phase solution with a 6-cylinder engine, housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-150-SD",
+    slug: "pgs-3-150-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "120 Kw/ 150 Kva",
+    primePower: "108 Kw/ 135 Kva",
+    engine: "SDEC CA6DF2D-18D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 295 x W 110 x H 165 cm",
+    weight: "1200 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "6 inline",
+      aspiration: "Turbo charge",
+      cycle: "6",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "5.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial plants",
+      "Hospitals",
+      "Shopping malls",
+      "High-rise buildings",
+      "Data centers",
+      "Construction projects",
+      "Mining operations",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "150 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control and automatic battery charger. A powerful three-phase solution with a 6-cylinder engine, housed in a silent, weather-proof steel enclosure.",
+
+    operationConditions: {
+      altitude: "1500m",
+      temperature: "40°C",
+      derating: "1% per 100m above 1500m",
+      standbyOperation:
+        "500 hours during one year (300 hours for continues use)",
+      overloadCapacity: "10%",
+    },
+  },
+
+  {
+    name: "PGS-3-175-SD",
+    slug: "pgs-3-175-sd",
+    category: "sdec-diesel",
+    images: [
+      "/images/sdec1.webp",
+      "/images/sdec2.webp",
+      "/images/sdec3.webp",
+      "/images/sdec4.webp",
+    ],
+    standbyPower: "140 Kw/ 174 Kva",
+    primePower: "128 Kw/ 160 Kva",
+    engine: "SDEC CA6DF2D-21D",
+    speed: "1800rpm",
+    frequency: "60Hz",
+    fuelType: "Diesel",
+    startingVoltage: "24v",
+    voltageOptions:
+      "208v/120v 220v/127v 240v/139v 380v/220v 440v/254v 480v/277v",
+    dimensions: "L 310 x W 110 x H 165 cm", // Adjusted W/H order to match standard
+    weight: "1200 Kgs",
+    fuelCapacity: "Good for 8 Hours",
+    connectionMode: "Three Phase",
+    speedControl: "Electronically",
+    type: "Silent",
+
+    engineSpecs: {
+      cylinders: "6 inline",
+      aspiration: "Turbo charge",
+      cycle: "6",
+      combustion: "Direct Injection",
+      cooling: "Water Cooled",
+      boreStroke: "102×120",
+      compression: "16.5:1",
+      displacement: "5.9 L",
+    },
+
+    alternatorSpecs: {
+      technology: "Stamford Technology",
+      insulation: "Class H",
+      excitation: "Self-Excitation or PMG",
+      protection: "Ip23",
+    },
+
+    features: [
+      "SMARTGEN Genset Digital Control",
+      "Auto / Manual Start Operation",
+      "Engine Protection Device Monitoring an extensive number of engine parameters",
+      "Display warnings, shutdown and engine status information on the back-lit LCD screen",
+      "Automatic Battery Charger",
+      "Design in switching power structure, wide range of AC voltage input, small volume light weight, and high efficiency",
+      "Two stage charging method (constant current firstly and then constant voltage)",
+      "SWG Genset Starting Battery",
+      "High Performance Generator Sets Battery Maintenance Free",
+      "Nano-Technology, reducing the possibility of batteries catching fire",
+      "Less flammable electrode material",
+      "Increasing the available power from a battery",
+      "Avoid overcharging and extend battery life to the fullest",
+      "With short circuit and reverse connection protection",
+      "Decreasing the time required to recharged a battery",
+      "Sound Proof / Weather Proof Steel enclosure with polyester power coated enamel",
+      "Special integrated steel skid base tank with enamel paint",
+      "Emergency push stop button, mounted on Enclosure exterior",
+      "Steel locks and hinges",
+      "Large residential muffler for silent operation",
+      "Safely enclosed exhaust silencing system",
+      "Genset Mobile Trail Type (Optional)",
+    ],
+
+    applications: [
+      "Large industrial plants",
+      "Hospitals",
+      "Shopping malls",
+      "High-rise buildings",
+      "Data centers",
+      "Construction projects",
+      "Mining operations",
+    ],
+
+    certifications: {
+      engine: "ISO 3046, BS 5514, DIN 6271",
+      alternator:
+        "UTE NFC 51-111-105-110 ICE34-1, BS 5000-4999 NEMA MG 21, VDE 0530 ISO 8528",
+    },
+
+    description:
+      "175 KVA diesel generator set with SDEC engine featuring SMARTGEN digital control. A high-capacity 6-cylinder power solution designed for heavy industrial use, enclosed in a silent, weather-proof cabinet.",
+
     operationConditions: {
       altitude: "1500m",
       temperature: "40°C",

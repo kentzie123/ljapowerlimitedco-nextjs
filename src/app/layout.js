@@ -116,6 +116,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <meta name="apple-mobile-web-app-title" content="LJA" />
         <link
           rel="preload"
           href="/fonts/font-heading.woff2"

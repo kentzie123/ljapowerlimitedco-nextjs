@@ -3,10 +3,9 @@
 import { useState } from "react";
 import Image from "next-image-export-optimizer";
 import Link from "next/link";
-import { Zap, ShieldCheck, Fuel, Gauge } from "lucide-react";
+import { Zap, ShieldCheck, Fuel, Gauge } from "lucide-react"; // Removed Plug icon as it's no longer in the list
 
 const ProductCard = ({ product }) => {
-  // State to handle image fallback logic safely
   const [imgSrc, setImgSrc] = useState(product.images[0]);
 
   return (
@@ -25,22 +24,26 @@ const ProductCard = ({ product }) => {
           onError={() => setImgSrc("/images/lja-logo.webp")}
         />
 
-        {/* Dark Gradient Overlay for text readability */}
-        {/* Fixed: from-[var(--card-blue)] -> from-(--card-blue) */}
+        {/* Gradient Overlay */}
         <div className="absolute inset-0 bg-linear-to-t from-(--card-blue) via-transparent to-transparent opacity-80" />
 
-        {/* Power Badge */}
-        {/* Fixed: bg-[var(--accent-yellow)] -> bg-(--accent-yellow) */}
-        <div className="absolute top-3 right-3 bg-(--accent-yellow) text-black px-3 py-1 rounded-md text-xs font-bold font-heading uppercase tracking-wide shadow-md z-10">
-          {product.standbyPower.split("/")[1].trim()}
+        {/* --- TOP RIGHT BADGES CONTAINER --- */}
+        <div className="absolute top-3 right-3 z-10 flex items-center gap-2">
+          {/* New Connection Mode Badge (Dark Glass Style) */}
+          <div className="bg-black/70 backdrop-blur-sm border border-white/20 text-white px-2 py-1.5 rounded-md text-[10px] font-bold uppercase tracking-wider shadow-sm">
+            {product.connectionMode}
+          </div>
+
+          {/* Existing Power Badge (Yellow Style) */}
+          <div className="bg-(--accent-yellow) text-black px-3 py-1.5 rounded-md text-xs font-bold font-heading uppercase tracking-wide shadow-md">
+            {product.standbyPower.split("/")[1].trim()}
+          </div>
         </div>
       </div>
 
       {/* Content */}
       <div className="card-content p-5 flex flex-col flex-1 justify-between">
         <div>
-          {/* Title */}
-          {/* Fixed: text-[var(--accent-yellow)] -> text-(--accent-yellow) */}
           <h3 className="text-xl font-bold font-heading uppercase tracking-wide text-(--accent-yellow) mb-3 leading-tight group-hover:text-white transition-colors">
             {product.engine}
           </h3>
@@ -48,7 +51,6 @@ const ProductCard = ({ product }) => {
           {/* Power Specifications Grid */}
           <div className="grid grid-cols-2 gap-2 mb-4 bg-black/20 p-2 rounded-md border border-white/5">
             <div className="flex flex-col">
-              {/* Fixed: text-[var(--muted-gray)] -> text-(--muted-gray) */}
               <span className="text-[10px] uppercase tracking-wider text-(--muted-gray)">
                 Standby
               </span>
@@ -66,7 +68,7 @@ const ProductCard = ({ product }) => {
             </div>
           </div>
 
-          {/* Key Features List */}
+          {/* Key Features List (Connection Mode removed from here) */}
           <ul className="space-y-2">
             <li className="flex items-start gap-2">
               <Zap className="w-4 h-4 text-(--accent-yellow) shrink-0 mt-0.5" />

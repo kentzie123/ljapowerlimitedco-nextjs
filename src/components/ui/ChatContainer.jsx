@@ -56,7 +56,7 @@ const ChatContainer = ({ setOpenChat }) => {
   }, []);
 
   return (
-    <div className="fixed inset-0 sm:inset-auto sm:bottom-4 sm:right-4 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 z-50 w-full sm:w-[25rem] sm:h-[35rem] rounded-none sm:rounded-xl shadow-2xl flex flex-col overflow-hidden border-0 sm:border border-[var(--card-blue)] bg-white">
+    <div className="fixed inset-0 mt-[72px] sm:inset-auto sm:bottom-4 sm:right-4 md:bottom-8 md:right-8 lg:bottom-12 lg:right-12 z-50 w-full sm:w-[25rem] sm:h-[35rem] rounded-none sm:rounded-xl shadow-2xl flex flex-col overflow-hidden border-0 sm:border border-[var(--card-blue)] bg-white">
       {/* Header */}
       <div className="bg-[var(--panel-blue)] text-white flex items-center justify-between p-4 border-b border-[var(--card-blue)]">
         <div className="flex items-center gap-3">

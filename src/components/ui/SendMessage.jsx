@@ -8,9 +8,6 @@ import { useRef, useState, useEffect } from "react";
 import { useChatStore } from "@/stores/useChatStore"; // Adjusted import path
 import { toast } from "react-toastify";
 
-// File Helpers
-import { formatFileSize } from "@/utils/fileHelpers"; // Adjusted import path
-
 // Emoji Picker
 import EmojiPicker from "emoji-picker-react";
 

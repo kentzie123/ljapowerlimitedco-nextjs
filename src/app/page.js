@@ -21,7 +21,7 @@ export const metadata = {
     siteName: "LJA Power Limited Co",
     images: [
       {
-        url: "https://ljapowerlimitedco.com/images/hero1.webp",
+        url: "https://ljapowerlimitedco.com/images/homePageMetaImage.webp",
         width: 1200,
         height: 630,
         alt: "LJA Power Hero Image",
@@ -49,7 +49,7 @@ export default function HomePage() {
         },
         primaryImageOfPage: {
           "@type": "ImageObject",
-          url: "https://ljapowerlimitedco.com/images/hero1.webp",
+          url: "https://ljapowerlimitedco.com/images/homePageMetaImage.webp",
           width: 1200,
           height: 630,
         },

@@ -1,45 +1,58 @@
 import BranchContactPage from "@/components/pages/BranchContactPage";
 import { contacts } from "@/constants";
+import { notFound } from "next/navigation";
 
+// 1. FIXED: The key 'slug' MUST match the folder name [slug]
 export async function generateStaticParams() {
   return contacts.map((contact) => ({
     slug: contact.slug,
   }));
 }
 
-// 1. DYNAMIC METADATA
+// 2. DYNAMIC METADATA
 export async function generateMetadata({ params }) {
-  const { branchSlug } = await params;
-  const branchData = contacts.find((c) => c.slug === branchSlug);
+  // Update: Destructure 'slug' (not branchSlug)
+  const { slug } = await params;
+  const branchData = contacts.find((c) => c.slug === slug);
 
   if (!branchData) {
     return {
       title: "Branch Not Found | LJA Power Limited Co",
       description: "The requested branch location could not be found.",
+      robots: { index: false, follow: false },
     };
   }
 
+  const title =
+    branchData.seo?.title || `${branchData.office} | Contact LJA Power`;
+  const desc =
+    branchData.seo?.description || `Contact LJA Power in ${branchData.office}.`;
+
   return {
-    title: `${branchData.office} | Contact LJA Power`,
-    description: `Contact LJA Power Limited Co in ${branchData.office}. Call ${branchData.number} for generator sales, installation, and maintenance.`,
+    title: title,
+    description: desc,
     alternates: {
       canonical: `https://ljapowerlimitedco.com/branches/${branchData.slug}`,
     },
     openGraph: {
-      title: `${branchData.office} | Contact LJA Power`,
-      description: `Contact LJA Power Limited Co in ${branchData.office}. Call ${branchData.number}.`,
+      title: title,
+      description: desc,
       url: `https://ljapowerlimitedco.com/branches/${branchData.slug}`,
       images: ["https://ljapowerlimitedco.com/images/contacts-hero-page.webp"],
     },
   };
 }
 
-// 2. SERVER COMPONENT
+// 3. SERVER COMPONENT
 export default async function Page({ params }) {
-  const { branchSlug } = await params;
-  const branchData = contacts.find((c) => c.slug === branchSlug) || contacts[0];
+  // Update: Destructure 'slug' (not branchSlug)
+  const { slug } = await params;
+  const branchData = contacts.find((c) => c.slug === slug);
 
-  // 3. SCHEMA (JSON-LD)
+  if (!branchData) {
+    notFound();
+  }
+
   const branchContactSchema = {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
@@ -78,7 +91,8 @@ export default async function Page({ params }) {
           __html: JSON.stringify(branchContactSchema),
         }}
       />
-      <BranchContactPage />
+      {/* Pass data to Client Component */}
+      <BranchContactPage initialBranchData={branchData} />
     </>
   );
 }

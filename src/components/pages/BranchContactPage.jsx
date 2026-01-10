@@ -4,7 +4,6 @@
 import "@/assets/css/ContactsPage.css";
 
 // Hooks
-import { useParams } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 
 // Components
@@ -18,23 +17,20 @@ import { Phone, Mail, MapPin } from "lucide-react";
 // Data
 import { contacts } from "@/constants";
 
-const BranchContactPage = () => {
-  const params = useParams();
-  const branchSlug = params?.branchSlug;
-
-  // Safety check: Find branch, fallback to first contact, or empty object if data missing
-  const branchData =
-    contacts.find((c) => c.slug === branchSlug) || contacts?.[0] || {};
+// ✅ Accept prop here
+const BranchContactPage = ({ initialBranchData }) => {
+  // Use passed data or fallback safely
+  const branchData = initialBranchData || contacts[0];
 
   const [selectedLocation, setSelectedLocation] = useState(branchData);
-  const mapSectionRef = useRef(null); // 1. Use Ref for scrolling
+  const mapSectionRef = useRef(null);
 
-  // Update selected location if the URL slug changes
+  // Update state if the prop changes (e.g., navigating between branches)
   useEffect(() => {
-    if (branchData && branchData.slug) {
-      setSelectedLocation(branchData);
+    if (initialBranchData) {
+      setSelectedLocation(initialBranchData);
     }
-  }, [branchSlug, branchData]);
+  }, [initialBranchData]);
 
   const setLocation = (contact) => {
     setSelectedLocation(contact);
@@ -45,7 +41,9 @@ const BranchContactPage = () => {
   };
 
   return (
-    <div className="bg-(--bg-dark) text-white">
+    <div className="bg-[var(--bg-dark)] text-white">
+      {" "}
+      {/* Fixed CSS variable syntax */}
       {/* Hero Section */}
       <PageNavigationHeader
         h1="Contact"
@@ -57,15 +55,15 @@ const BranchContactPage = () => {
         breadcrumbs={[
           { label: "Home", to: "/" },
           { label: "Contacts", to: "/contacts" },
-          { label: branchData.office },
+          { label: branchData.office }, // No link on current page
         ]}
       />
-
       {/* Main Content */}
       <div className="section-container px-6 lg:px-12 py-16 lg:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
-          <div className="bg-(--card-blue) p-8 rounded-xl border border-white/10 shadow-2xl relative overflow-hidden group">
-            <div className="absolute -top-20 -right-20 w-40 h-40 bg-(--accent-yellow)/5 rounded-full blur-3xl group-hover:bg-(--accent-yellow)/10 transition-colors duration-500 pointer-events-none" />
+          <div className="bg-[var(--card-blue)] p-8 rounded-xl border border-white/10 shadow-2xl relative overflow-hidden group">
+            {/* ... rest of your UI (unchanged) ... */}
+            <div className="absolute -top-20 -right-20 w-40 h-40 bg-[var(--accent-yellow)]/5 rounded-full blur-3xl group-hover:bg-[var(--accent-yellow)]/10 transition-colors duration-500 pointer-events-none" />
             <ContactForm />
           </div>
 
@@ -73,9 +71,10 @@ const BranchContactPage = () => {
           <div className="flex flex-col justify-center">
             <div className="text-center md:text-left mb-12">
               <h2 className="font-heading text-5xl md:text-6xl font-bold uppercase tracking-tight text-white leading-none mb-6">
-                Get in <span className="text-(--accent-yellow)">Touch</span>
+                Get in{" "}
+                <span className="text-[var(--accent-yellow)]">Touch</span>
               </h2>
-              <p className="text-(--muted-gray) text-lg leading-relaxed">
+              <p className="text-[var(--muted-gray)] text-lg leading-relaxed">
                 Reach our <strong>{branchData.office}</strong> team directly
                 through the options below.
               </p>
@@ -85,15 +84,15 @@ const BranchContactPage = () => {
               {/* Phone */}
               <a
                 href={`tel:${branchData.number}`}
-                className="group flex flex-col items-center p-6 bg-(--bg-dark)/50 rounded-lg border border-white/5 hover:border-(--accent-yellow) hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col items-center p-6 bg-[var(--bg-dark)]/50 rounded-lg border border-white/5 hover:border-[var(--accent-yellow)] hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="mb-4 bg-(--accent-yellow)/10 p-4 rounded-full group-hover:bg-(--accent-yellow) transition-colors duration-300">
-                  <Phone className="size-6 text-(--accent-yellow) group-hover:text-black transition-colors" />
+                <div className="mb-4 bg-[var(--accent-yellow)]/10 p-4 rounded-full group-hover:bg-[var(--accent-yellow)] transition-colors duration-300">
+                  <Phone className="size-6 text-[var(--accent-yellow)] group-hover:text-black transition-colors" />
                 </div>
                 <span className="font-heading font-bold uppercase tracking-wide text-sm mb-1">
                   Phone
                 </span>
-                <span className="text-(--muted-gray) text-xs text-center">
+                <span className="text-[var(--muted-gray)] text-xs text-center">
                   {branchData.number}
                 </span>
               </a>
@@ -101,15 +100,15 @@ const BranchContactPage = () => {
               {/* Email */}
               <a
                 href="mailto:lja.ljapowerlimitedco@gmail.com"
-                className="group flex flex-col items-center p-6 bg-(--bg-dark)/50 rounded-lg border border-white/5 hover:border-(--accent-yellow) hover:-translate-y-1 transition-all duration-300"
+                className="group flex flex-col items-center p-6 bg-[var(--bg-dark)]/50 rounded-lg border border-white/5 hover:border-[var(--accent-yellow)] hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="mb-4 bg-(--accent-yellow)/10 p-4 rounded-full group-hover:bg-(--accent-yellow) transition-colors duration-300">
-                  <Mail className="size-6 text-(--accent-yellow) group-hover:text-black transition-colors" />
+                <div className="mb-4 bg-[var(--accent-yellow)]/10 p-4 rounded-full group-hover:bg-[var(--accent-yellow)] transition-colors duration-300">
+                  <Mail className="size-6 text-[var(--accent-yellow)] group-hover:text-black transition-colors" />
                 </div>
                 <span className="font-heading font-bold uppercase tracking-wide text-sm mb-1">
                   Email
                 </span>
-                <span className="text-(--muted-gray) text-xs text-center truncate w-full px-2">
+                <span className="text-[var(--muted-gray)] text-xs text-center truncate w-full px-2">
                   lja.ljapowerlimitedco@gmail.com
                 </span>
               </a>
@@ -117,15 +116,15 @@ const BranchContactPage = () => {
               {/* Locations Scroll */}
               <button
                 onClick={scrollToMap}
-                className="group flex flex-col items-center p-6 bg-(--bg-dark)/50 rounded-lg border border-white/5 hover:border-(--accent-yellow) hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                className="group flex flex-col items-center p-6 bg-[var(--bg-dark)]/50 rounded-lg border border-white/5 hover:border-[var(--accent-yellow)] hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
-                <div className="mb-4 bg-(--accent-yellow)/10 p-4 rounded-full group-hover:bg-(--accent-yellow) transition-colors duration-300">
-                  <MapPin className="size-6 text-(--accent-yellow) group-hover:text-black transition-colors" />
+                <div className="mb-4 bg-[var(--accent-yellow)]/10 p-4 rounded-full group-hover:bg-[var(--accent-yellow)] transition-colors duration-300">
+                  <MapPin className="size-6 text-[var(--accent-yellow)] group-hover:text-black transition-colors" />
                 </div>
                 <span className="font-heading font-bold uppercase tracking-wide text-sm mb-1">
                   Map
                 </span>
-                <span className="text-(--accent-yellow) text-xs underline decoration-dotted">
+                <span className="text-[var(--accent-yellow)] text-xs underline decoration-dotted">
                   View Location
                 </span>
               </button>
@@ -140,7 +139,7 @@ const BranchContactPage = () => {
           className="mt-24 pt-12 border-t border-white/10"
         >
           <h3 className="text-center md:text-left text-3xl font-heading font-bold uppercase tracking-wide text-white mb-8">
-            <span className="text-(--accent-yellow)">
+            <span className="text-[var(--accent-yellow)]">
               {selectedLocation.office}
             </span>{" "}
             Location
@@ -161,7 +160,7 @@ const BranchContactPage = () => {
               </div>
             </div>
 
-            <div className="lg:col-span-8 h-[500px] rounded-xl overflow-hidden shadow-2xl border border-(--accent-yellow)/20 relative group bg-(--bg-surface)">
+            <div className="lg:col-span-8 h-[500px] rounded-xl overflow-hidden shadow-2xl border border-[var(--accent-yellow)]/20 relative group bg-[var(--bg-surface)]">
               {selectedLocation.map ? (
                 <iframe
                   title={`${selectedLocation.office} Location Map`}
@@ -178,7 +177,7 @@ const BranchContactPage = () => {
                   className="transition-all duration-500 group-hover:filter-none w-full h-full"
                 ></iframe>
               ) : (
-                <div className="w-full h-full flex items-center justify-center text-(--muted-gray)">
+                <div className="w-full h-full flex items-center justify-center text-[var(--muted-gray)]">
                   Map unavailable
                 </div>
               )}
